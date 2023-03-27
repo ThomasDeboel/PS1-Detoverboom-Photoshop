@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    background-color: #129d12;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+main {
+    text-align: center;
+}
+
+button {
+    width: 6rem;
+}
+
+#controleren {
+    width: 10rem;
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
