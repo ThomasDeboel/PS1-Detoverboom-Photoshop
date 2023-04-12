@@ -63,7 +63,7 @@ footer a:hover {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D ;
+    background: #0b5ed7 ;
     cursor: pointer;
 }
 
@@ -71,6 +71,24 @@ footer a:hover {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
+    background: #0b5ed7;
     cursor: pointer;
+}
+#rangeBlur::-webkit-slider-thumb {
+    background: #ffca2c ;
+}
+#rangeBlur::-moz-range-thumb {
+    background: #ffca2c ;
+}
+#rangeContrast::-webkit-slider-thumb {
+    background: #5c636a ;
+}
+#rangeContrast::-moz-range-thumb {
+    background: #5c636a ;
+}
+#rangeDraaien::-webkit-slider-thumb {
+    background: #bb0012 ;
+}
+#rangeDraaien::-moz-range-thumb {
+    background: #bb0012 ;
 }
