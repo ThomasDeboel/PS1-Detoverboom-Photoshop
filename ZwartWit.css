@@ -15,6 +15,9 @@
     -webkit-transition: .2s;
     transition: opacity .2s;
 }
+#foto1 {
+    filter: grayscale(80%);
+}
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
