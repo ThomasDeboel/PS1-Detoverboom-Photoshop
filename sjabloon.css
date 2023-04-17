@@ -96,3 +96,47 @@ footer a:hover {
 #rangeBrightness::-moz-range-thumb {
     background: #202020 ;
 }
+
+.foto {
+    width: 300px;
+    height: auto;
+}
+
+#oefening1 {
+    filter: grayscale(90%);
+}
+
+#oefening2 {
+    transform: rotateZ(25deg);
+}
+
+#oefening3 {
+    filter: brightness(150%);
+}
+
+#oefening4 {
+    filter: contrast(45%) blur(2px);
+}
+
+#oefening5 {
+    filter: brightness(75%) blur(1px);
+}
+
+#oefening6 {
+    transform: rotate(180deg);
+    filter: contrast(200%);
+}
+
+#linkOefeningen {
+    background-color: #cc19b3;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    text-decoration: none;
+}
+
+#linkOefeningen:hover {
+    background-color: #b918a5;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    text-decoration: none;
+}
