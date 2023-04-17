@@ -92,3 +92,9 @@ footer a:hover {
 #rangeDraaien::-moz-range-thumb {
     background: #bb0012 ;
 }
+#rangeBrightness::-webkit-slider-thumb {
+    background: #202020 ;
+}
+#rangeBrightness::-moz-range-thumb {
+    background: #202020 ;
+}
