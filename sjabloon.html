@@ -6,6 +6,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="sjabloon.css">
     <title>Fotobewerking</title>
+    <style>
+        /* Import Google font - Poppins */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body{
+            background-color: #ffffff;
+        }
+        ::selection{
+            color: #fff;
+            background: #6F36FF;
+        }
+        .wrapper{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            max-width: 450px;
+            width: 100%;
+            background: transparent;
+            border-radius: 10px;
+
+
+            text-align:center;
+
+        }
+        .wrapper header{
+            font-size: 23px;
+            font-weight: 500;
+            padding: 17px 30px;
+
+        }
+        .wrapper header.active{
+            cursor: move;
+            user-select: none;
+        }
+
+    </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar navbar-expand-lg bg-primary">
@@ -39,7 +80,14 @@
 
         <div class="d-flex flex-column justify-content-center align-items-center">
             <div class="form-floating">
-                <img src="luchtfoto's/luchtfoto1.jpg" alt="luchtfoto" id="foto1">
+                <div style="position: relative;">
+                    <div style="position: absolute; top: 0; left: 0; z-index: 1;" class="wrapper">
+                        <header id="output"></header>
+                    </div>
+                    <img src="luchtfoto's/luchtfoto1.jpg" alt="luchtfoto" id="foto1">
+                </div>
+
+
                 <!--<textarea class="form-control" placeholder="voorbeeld" id="floatingTextarea1"
                           style="height: 150px"></textarea>
                 <label for="floatingTextarea1">Voorbeeld</label>-->
@@ -49,6 +97,26 @@
                           style="height: 150px"></textarea>
                 <label for="floatingTextarea2">Voorbeeld</label>
             </div>
+        </div>
+        <div class="d-flex justify-content-evenly mt-5" id="textgroup">
+            <input type="text" id="myInput" onkeyup="copyText()" placeholder="Typ hier">
+            <select id="colorPicker" onchange="changeColor()">
+                <option value="black">Zwart</option>
+                <option value="red">Rood</option>
+                <option value="green">Groen</option>
+                <option value="blue">Blauw</option>
+                <option value="white">Wit</option>
+            </select>
+            <select id="fontSizePicker" onchange="changeFontSize()">
+                <option value="20px">Klein</option>
+                <option value="60px">Normaal</option>
+                <option value="120px">Groot</option>
+            </select>
+            <select id="fontPicker" onchange="changeFont()">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+            </select>
         </div>
         <div class="d-flex justify-content-evenly mt-5" id="buttongroup">
             <button type="button" class="btn btn-primary" id="zwartwit">Zwart/wit</button>
@@ -79,5 +147,52 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="sjabloon.js"></script>
+    <script>
+        const wrapper = document.querySelector(".wrapper"),
+            header = wrapper.querySelector("header");
+
+        function onDrag({movementX, movementY}){
+            let getStyle = window.getComputedStyle(wrapper);
+            let leftVal = parseInt(getStyle.left);
+            let topVal = parseInt(getStyle.top);
+            wrapper.style.left = `${leftVal + movementX}px`;
+            wrapper.style.top = `${topVal + movementY}px`;
+        }
+
+        header.addEventListener("mousedown", ()=>{
+            header.classList.add("active");
+            header.addEventListener("mousemove", onDrag);
+        });
+
+        document.addEventListener("mouseup", ()=>{
+            header.classList.remove("active");
+            header.removeEventListener("mousemove", onDrag);
+        });
+        function copyText() {
+            var input = document.getElementById("myInput");
+            var output = document.getElementById("output");
+            output.innerHTML = input.value;
+        }
+        function changeColor() {
+            var colorPicker = document.getElementById("colorPicker");
+            var selectedColor = colorPicker.options[colorPicker.selectedIndex].value;
+            var myDiv = document.getElementById("output");
+            myDiv.style.color = selectedColor;
+        }
+        function changeFontSize() {
+            var fontSizePicker = document.getElementById("fontSizePicker");
+            var selectedSize = fontSizePicker.options[fontSizePicker.selectedIndex].value;
+            var myDiv = document.getElementById("output");
+            myDiv.style.fontSize = selectedSize;
+        }
+        function changeFont() {
+            var fontPicker = document.getElementById("fontPicker");
+            var selectedFont = fontPicker.options[fontPicker.selectedIndex].value;
+            var myDiv = document.getElementById("output");
+            myDiv.style.fontFamily = selectedFont;
+        }
+
+
+    </script>
 </body>
 </html>
