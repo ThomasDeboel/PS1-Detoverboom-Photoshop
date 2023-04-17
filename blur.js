@@ -4,7 +4,7 @@ const image = document.getElementById("foto1");
 
 sliderBlur.style.display ='none';
 sliderBlur3.addEventListener('input', function() {
-    image.style.filter = `blur(${this.value}%)`;
+    image.style.filter = `blur(${this.value}px)`;
 });
 const buttonBlur = document.querySelector('#blur');
 buttonBlur.addEventListener('click', function (){

@@ -13,7 +13,7 @@
     transition: opacity .2s;
 }
 #foto1 {
-    filter: grayscale(80%);
+    filter: blur(4px);
 }
 
 .slider::-webkit-slider-thumb {
