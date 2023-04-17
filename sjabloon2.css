@@ -49,3 +49,11 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.icons {
+    height: 400px;
+}
+
+#indexfoto {
+    border-radius: 20%;
+}
+
