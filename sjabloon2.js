@@ -1,11 +1,11 @@
-const chosen_input = document.querySelector("#chosen_image");
+const chosen_input = document.getElementById("foto")
 var uploaded_img = "";
 
 chosen_input.addEventListener("change", function (){
     const reader = new FileReader();
     reader.addEventListener("load", () => {
         uploaded_img = reader.result;
-        document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_img})`;
+        document.getElementById("foto1").style.backgroundImage = `url(${uploaded_img})`;
     });
     reader.readAsDataURL(this.files[0]);
 })
@@ -17,7 +17,7 @@ chosen_input2.addEventListener("change", function (){
     const reader = new FileReader();
     reader.addEventListener("load", () => {
         uploaded_img2 = reader.result;
-        document.querySelector("#display_image2").style.backgroundImage = `url(${uploaded_img2})`;
+        document.getElementById("foto1").style.backgroundImage = `url(${uploaded_img2})`;
     });
     reader.readAsDataURL(this.files[0]);
 })

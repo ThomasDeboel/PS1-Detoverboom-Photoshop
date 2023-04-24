@@ -74,12 +74,10 @@ footer a:hover {
     background: #0b5ed7;
     cursor: pointer;
 }
-#rangeBlur::-webkit-slider-thumb {
+#rangeBlur::-webkit-slider-thumb, #rangeBlur::-moz-range-thumb{
     background: #ffca2c ;
 }
-#rangeBlur::-moz-range-thumb {
-    background: #ffca2c ;
-}
+
 #rangeContrast::-webkit-slider-thumb {
     background: #5c636a ;
 }
@@ -91,4 +89,49 @@ footer a:hover {
 }
 #rangeDraaien::-moz-range-thumb {
     background: #bb0012 ;
+}
+#rangeBrightness::-webkit-slider-thumb {
+    background: #202020 ;
+}
+#rangeBrightness::-moz-range-thumb {
+    background: #202020 ;
+}
+
+.foto {
+    width: 300px;
+    height: auto;
+}
+
+#oefening1 {
+    filter: grayscale(90%);
+}
+
+#oefening2 {
+    transform: rotateZ(25deg);
+}
+
+#oefening3 {
+    filter: brightness(150%);
+}
+
+#oefening4 {
+    filter: blur(2px);
+}
+
+#oefening5 {
+    filter: contrast(55%);
+}
+
+#linkOefeningen {
+    background-color: #cc19b3;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    text-decoration: none;
+}
+
+#linkOefeningen:hover {
+    background-color: #b918a5;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    text-decoration: none;
 }

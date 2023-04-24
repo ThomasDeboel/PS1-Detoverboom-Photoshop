@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="uitleg.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="blur1.css">
+  <title>Uitleg</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Fotobewerking</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Uitleg</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sjabloon.html">L1-2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sjabloon2.html">L3-4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">L5-6</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container flex-grow-1 mt-5">
+  <h1>
+    Hoe werkt de Blur filter
+  </h1>
+  <div>
+    <div>
+      <h2>Wat doet de Blurfilter</h2>
+      <p>De blur filter in Photoshop wordt gebruikt om een afbeelding onscherp te maken. Dit kan handig zijn als je bijvoorbeeld wilt dat de achtergrond minder scherp is, zodat de voorgrond er beter uitspringt. Of als je wilt dat bepaalde delen van de afbeelding minder opvallen, omdat ze niet zo belangrijk zijn.
+      <p>Stel je voor dat je een foto hebt genomen van een bloemenveld en dat je wilt dat de bloemen dicht bij scherp zijn, maar de bergen op de achtergrond onscherp. Dan kan je de blurfilter gebruiken om de achtergrond onscherp te maken en zo de focus op de bloemen te leggen.
+      </p>
+      <p>
+        Het is belangrijk om te onthouden dat de blurfilter niet altijd de beste optie is. Het kan soms leiden tot een minder scherpe afbeelding en het is dus belangrijk om te weten wanneer je het wel of niet moet gebruiken.
+      </p>
+
+    </div>
+    <div>
+      <h2 class="mt-4"> De knop
+      </h2>
+      <div>
+        <button type="button" class="btn btn-warning" id="blur">Blur</button>
+      </div>
+    </div>
+    <div>
+      <p>
+        Met deze knop komt de slider tevoorschijn en gaat die als je nog een keer drukt weg
+      </p>
+      <div class="justify-content-evenly mt-4" id="sliderBlur">
+        <input type="range" min="0" max="10" value="0" class="slider" id="rangeBlur">
+      </div>
+    </div>
+
+  </div>
+  <div>
+    <h2 class="mt-4">De slider</h2>
+    <div class="justify-content-evenly mt-4" id="sliderBlur2">
+      <input type="range" min="0" max="10" value="0" class="slider" id="rangeBlur2">
+    </div>
+    <p>
+      Deze slider zorgt ervoor dat de afbeelding die op het scherm staat van minder scherp of heel scherp wordt.
+    </p>
+  </div>
+  <div>
+    <h2 class="mt-4"> Voorbeeld</h2>
+    <p> Bij dit voorbeeld staat de slider net niet in de helft, dit betekent dat de scherpte van de afbeelding verminderd is.</p>
+    <div class="justify-content-evenly mt-4" id="sliderBlur3">
+      <input type="range" min="0" max="10" value="4" class="slider" id="rangeBlur3">
+    </div>
+    <div class="d-flex justify-content-center my-3">
+      <img src="random_pictures/pexels-thomas-d-14534494.jpg" alt="foto pad in bos" id="foto1" width="480" height="640">
+    </div>
+
+
+  </div>
+
+
+</main>
+<footer class="bg-primary p-3 text-light">&copy; <a href="https://www.thomasmore.be/" class="text-light">Thomas More</a></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="blur1.js"></script>
+
+</body>
+</html>

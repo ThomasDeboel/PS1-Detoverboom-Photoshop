@@ -4,33 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
   <link rel="stylesheet" href="sjabloon2.css">
   <title>Fotobewerking</title>
 </head>
 <body class="d-flex flex-column min-vh-100">
 <nav class="navbar navbar-expand-lg bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Fotobewerking</a>
+    <a class="navbar-brand" href="index.html">Fotobewerking</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" aria-current="page" href="../index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="uitleg.html">Uitleg</a>
+          <a class="nav-link" href="../uitleg.html">Uitleg</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sjabloon.html">L1-2</a>
+          <a class="nav-link" href="../sjabloon.html">L1-2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sjabloon2.html">L3-4</a>
+          <a class="nav-link active" href="#">L3-4</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="sjabloon3.html">L5-6</a>
+          <a class="nav-link" href="../sjabloon3.html">L5-6</a>
         </li>
       </ul>
     </div>
@@ -38,16 +37,26 @@
 </nav>
 <main class="container flex-grow-1 mt-5">
 
-  <h1 class="mb-5">Fotobewerking</h1>
-  <div class="d-flex flex-row justify-content-evenly">
-    <div class="d-flex flex-column align-items-start justify-content-center icons me-5">
-      <p><i class="fa-solid fa-camera fa-3x" style="color: #129d12"></i> Je kiest een afbeelding.</p>
-      <p><i class="fa-solid fa-wand-magic-sparkles fa-3x" style="color: #ffca2c"></i> Je voegt filters toe op de
-        afbeelding.</p>
-      <p><i class="fa-solid fa-image fa-3x" style="color: blueviolet"></i> Je krijgt een mooi eindresultaat.</p>
-    </div>
+  <div class="d-flex flex-row justify-content-around">
 
-    <img src="/foto's/index/pexels-tirachard-kumtanom-733853.jpg" id="indexfoto" alt="foto">
+    <div>
+      <input type="file" id="chosen_image">
+      <div id="display_image" class="mt-3"></div>
+    </div>
+    <div>
+      <input type="file" id="chosen_image2">
+      <div id="display_image2" class="mt-3"></div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-evenly mt-5">
+    <button type="button" class="btn btn-primary">Zwart/wit</button>
+    <button type="button" class="btn btn-warning">Blur</button>
+    <button type="button" class="btn btn-secondary">Contrast</button>
+    <button type="button" class="btn btn-danger">Draaien</button>
+  </div>
+
+  <div class="d-flex flex-row justify-content-center mt-3">
+    <button type="button" class="btn btn-success" id="controleren">Controleren</button>
   </div>
 
 

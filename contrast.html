@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="uitleg.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="contrast.css">
+  <title>Uitleg</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Fotobewerking</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Uitleg</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sjabloon.html">L1-2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sjabloon2.html">L3-4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">L5-6</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container flex-grow-1 mt-5">
+  <h1>
+    Hoe werkt de Contrast filter
+  </h1>
+  <div>
+    <div>
+      <h2>Wat doet de contrast filter</h2>
+      <p>Het contrastfilter wordt gebruikt om de kleurintensiteit van een afbeelding te verhogen of te verlagen. Dit betekent dat het donkerste deel van de afbeelding donkerder wordt gemaakt en het lichtste deel lichter. Het effect is dat de kleuren in de afbeelding helderder en levendiger worden.
+      </p>
+      <p>
+        Stel je voor dat je een foto hebt genomen van een zonsondergang op het strand, maar de kleuren niet zo levendig zijn als je had gehoopt. Door het contrastfilter te gebruiken, kun je de kleuren versterken en de zonsondergang er spectaculairder uit laten zien.
+      </p>
+      <p>
+        Het is belangrijk om te weten dat het verhogen van het contrast soms de details in de afbeelding kan verliezen en de afbeelding er onnatuurlijk kan laten uitzien. Daarom is het belangrijk om subtiel te zijn bij het aanpassen van het contrast, vooral als je foto's van mensen of dieren bewerkt.
+      </p>
+    </div>
+    <div>
+      <h2 class="mt-4"> Knop
+      </h2>
+      <div>
+        <button type="button" class="btn btn-secondary" id="contrast">Contrast</button>
+      </div>
+    </div>
+    <div>
+      <p>
+        Met deze knop komt de slider tevoorschijn en gaat die als je nog een keer drukt weg
+      </p>
+      <div class="justify-content-evenly mt-4" id="sliderContrast">
+        <input type="range" min="5" max="20" value="10" class="slider" id="rangeContrast">
+      </div>
+    </div>
+
+  </div>
+  <div>
+    <h2 class="mt-4">De slider</h2>
+    <div class="justify-content-evenly mt-4" id="sliderContrast2">
+      <input type="range" min="5" max="20" value="10" class="slider" id="rangeContrast2">
+    </div>
+    <p>
+      Deze slider zorgt ervoor dat de afbeelding die op het scherm staat het contrast volledig gaat veranderen, helemaal links is het maar een saaie foto en helemaar recht zijn de kleuren veel te fel.
+    </p>
+  </div>
+  <div>
+    <h2 class="mt-4"> Voorbeeld</h2>
+    <p> Bij dit voorbeeld staat de slider op over de helft, dit betekent dat de kleuren iets feller zijn dan wat ze origineel waren</p>
+    <div class="justify-content-evenly mt-4" id="sliderContrast3">
+      <input type="range" min="5" max="20" value="14" class="slider" id="rangeContrast3">
+    </div>
+    <div class="d-flex justify-content-center my-3">
+      <img src="random_pictures/pexels-thomas-d-14534494.jpg" alt="luchtfoto1" id="foto1" width="480" height="640">
+    </div>
+
+
+  </div>
+
+
+</main>
+<footer class="bg-primary p-3 text-light">&copy; <a href="https://www.thomasmore.be/" class="text-light">Thomas More</a></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="contrast.js"></script>
+
+</body>
+</html>
