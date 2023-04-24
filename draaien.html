@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="uitleg.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="draaien.css">
+  <title>Uitleg</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<nav class="navbar navbar-expand-lg bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Fotobewerking</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="uitleg.html">Uitleg</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sjabloon.html">L1-2</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="sjabloon2.html">L3-4</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">L5-6</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container flex-grow-1 mt-5">
+  <h1>
+    Hoe werkt de draaifilter?
+  </h1>
+  <div>
+    <div>
+      <h2>Wat doet de draaifilter?</h2>
+      <p>Met de draai filter kan je een foto kantelen.</p>
+    </div>
+    <div>
+      <h2 class="mt-4"> Knop
+      </h2>
+      <div>
+        <button type="button" class="btn btn-danger" id="draaien">Draaien</button>
+      </div>
+    </div>
+    <div>
+      <p>
+        Met deze knop komt de slider tevoorschijn en wanneer je nog eens klikt, gaat die weg.
+      </p>
+      <div class="justify-content-evenly mt-4" id="sliderDraaien">
+        <input type="range" min="0" max="360" value="0" class="slider" id="rangeDraaien">
+      </div>
+    </div>
+
+  </div>
+  <div>
+    <h2 class="mt-4">De slider</h2>
+    <div class="justify-content-evenly mt-4" id="sliderDraaien2">
+      <input type="range" min="0" max="360" value="0" class="slider" id="rangeDraaien2">
+    </div>
+    <p>
+      Deze slider zorgt ervoor dat de afbeelding die op het scherm staat van kleur (helemaal links) naar zwart/wit gaat.
+    </p>
+  </div>
+  <div>
+    <h2 class="mt-4"> Voorbeeld</h2>
+    <p> Bij dit voorbeeld staat de slider in de helft, dit betekent dat de kleur al een beetje weg is maar de foto nog niet helemaal zwart/wit is</p>
+    <div class="justify-content-evenly mt-4" id="sliderDraaien3">
+      <input type="range" min="0" max="360" value="8" class="slider" id="rangeDraaien3">
+    </div>
+    <div class="d-flex justify-content-center my-3">
+      <img src="random_pictures/pexels-thomas-d-14534494.jpg" alt="luchtfoto1" id="foto1" width="480" height="640">
+    </div>
+
+
+  </div>
+
+
+</main>
+<footer class="bg-primary p-3 text-light">&copy; <a href="https://www.thomasmore.be/" class="text-light">Thomas More</a></footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="draaien.js"></script>
+
+</body>
+</html>
