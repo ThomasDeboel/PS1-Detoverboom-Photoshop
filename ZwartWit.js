@@ -4,7 +4,7 @@ const image = document.getElementById("foto1");
 
 sliderZwartWit.style.display ='none';
 sliderZwartWit3.addEventListener('input', function() {
-    image.style.filter = `grayscale(${this.value*10}%)`;
+    image.style.filter = `grayscale(${this.value*100}%)`;
 });
 const buttonblackwhite = document.querySelector('#zwartwit');
 buttonblackwhite.addEventListener('click', function (){
