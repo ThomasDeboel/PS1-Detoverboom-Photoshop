@@ -74,7 +74,10 @@ footer a:hover {
     background: #0b5ed7;
     cursor: pointer;
 }
-#rangeBlur::-webkit-slider-thumb, #rangeBlur::-moz-range-thumb{
+#rangeBlur::-webkit-slider-thumb{
+    background: #ffca2c ;
+}
+#rangeBlur::-moz-range-thumb{
     background: #ffca2c ;
 }
 
