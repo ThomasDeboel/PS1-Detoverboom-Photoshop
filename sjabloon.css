@@ -122,6 +122,28 @@ footer a:hover {
     filter: contrast(55%);
 }
 
+#oef1 {
+    filter: brightness(150%);
+    transform: rotate(20deg);
+}
+
+#oef2 {
+    filter: contrast(160%) blur(2px);
+}
+
+#oef3{
+    filter: grayscale(100%) brightness(60%);
+}
+
+#oef4{
+    filter: blur(2px) contrast(200%);
+}
+
+#oef5{
+    filter: brightness(135%);
+    transform: rotate(180deg);
+}
+
 #linkOefeningen {
     background-color: #cc19b3;
     color: white;
