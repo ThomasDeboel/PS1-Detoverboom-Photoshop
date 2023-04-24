@@ -1,206 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css">
-
     <link rel="stylesheet" href="sjabloon.css">
-    <title>Fotobewerking</title>
-    <style>
-        /* Import Google font - Poppins */
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Poppins", sans-serif;
-        }
-        body{
-            background-color: #ffffff;
-        }
-        ::selection{
-            color: #fff;
-            background: #6F36FF;
-        }
-        .wrapper{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            max-width: 450px;
-            width: 100%;
-            background: transparent;
-            border-radius: 10px;
-
-
-            text-align:center;
-
-        }
-        .wrapper header{
-            font-size: 23px;
-            font-weight: 500;
-            padding: 17px 30px;
-
-        }
-        .wrapper header.active{
-            cursor: move;
-            user-select: none;
-        }
-
-    </style>
+    <title>L1-L2</title>
 </head>
-<body class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Fotobewerking</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="uitleg.html">Uitleg</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">L1-2</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sjabloon2.html">L3-4</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sjabloon3.html">L5-6</a>
-                    </li>
-                </ul>
-            </div>
+<body class="d-flex flex-column min-vh-100 justify-content-start">
+<nav class="navbar navbar-expand-lg bg-primary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Fotobewerking</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="uitleg.html">Uitleg</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">L1-2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sjabloon2.html">L3-4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sjabloon3.html">L5-6</a>
+                </li>
+            </ul>
         </div>
-    </nav>
-    <main class="container flex-grow-1 mt-5">
+    </div>
+</nav>
 
-        <div class="d-flex flex-column justify-content-center align-items-center">
-            <div class="form-floating">
-                <div style="position: relative;">
-                    <div style="position: absolute; top: 0; left: 0; z-index: 1;" class="wrapper">
-                        <header id="output"></header>
-                    </div>
-                    <img src="luchtfoto's/luchtfoto1.jpg" alt="luchtfoto" id="foto1">
-                </div>
-
-
-                <!--<textarea class="form-control" placeholder="voorbeeld" id="floatingTextarea1"
-                          style="height: 150px"></textarea>
-                <label for="floatingTextarea1">Voorbeeld</label>-->
-            </div>
-            <div class="form-floating mt-3 w-25">
-                <textarea class="form-control" placeholder="voorbeeld" id="floatingTextarea2"
-                          style="height: 150px"></textarea>
-                <label for="floatingTextarea2">Voorbeeld</label>
-            </div>
-        </div>
-        <div class="d-flex justify-content-evenly mt-5" id="textgroup">
-            <input type="text" id="myInput" onkeyup="copyText()" placeholder="Typ hier">
-            <select id="colorPicker" onchange="changeColor()">
-                <option value="black">Zwart</option>
-                <option value="red">Rood</option>
-                <option value="green">Groen</option>
-                <option value="blue">Blauw</option>
-                <option value="white">Wit</option>
-            </select>
-            <select id="fontSizePicker" onchange="changeFontSize()">
-                <option value="20px">Klein</option>
-                <option value="60px">Normaal</option>
-                <option value="120px">Groot</option>
-            </select>
-            <select id="fontPicker" onchange="changeFont()">
-                <option value="Arial">Arial</option>
-                <option value="Times New Roman">Times New Roman</option>
-                <option value="Verdana">Verdana</option>
-            </select>
-        </div>
-        <div class="d-flex justify-content-evenly mt-5" id="buttongroup">
-            <button type="button" class="btn btn-primary" id="zwartwit">Zwart/wit</button>
-            <button type="button" class="btn btn-warning" id="blur">Blur</button>
-            <button type="button" class="btn btn-secondary" id="contrast">Contrast</button>
-            <button type="button" class="btn btn-danger" id="draaien">Draaien</button>
-            <button type="button" class="btn btn-dark" id="brightness">Helderheid</button>
-        </div>
-        <div class="justify-content-evenly mt-4" id="sliderZwartWit">
-            <input type="range" min="0" max="10" value="0" class="slider" id="rangeZwartWit">
-        </div>
-        <div class="justify-content-evenly mt-4" id="sliderBlur">
-            <input type="range" min="0" max="10" value="0" class="slider" id="rangeBlur">
-        </div>
-        <div class="justify-content-evenly mt-4" id="sliderContrast">
-            <input type="range" min="5" max="20" value="10" class="slider" id="rangeContrast">
-        </div>
-        <div class="justify-content-evenly mt-4" id="sliderDraaien">
-            <input type="range" min="18" max="54" value="36" class="slider" id="rangeDraaien">
-        </div>
-
-        <div class="justify-content-evenly mt-4" id="sliderBrightness">
-            <input type="range" min="0" max="20" value="10" class="slider" id="rangeBrightness">
-        </div>
-
-        </div>
-
-        <div class="d-flex flex-row justify-content-center mt-3">
-            <button type="button" class="btn btn-success" id="controleren">Controleren</button>
-        </div>
-       
-
-    </main>
-    <footer class="bg-primary p-3 text-light">&copy; <a href="https://www.thomasmore.be/" class="text-light">Thomas More</a></footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="sjabloon.js"></script>
-    <script>
-        const wrapper = document.querySelector(".wrapper"),
-            header = wrapper.querySelector("header");
-
-        function onDrag({movementX, movementY}){
-            let getStyle = window.getComputedStyle(wrapper);
-            let leftVal = parseInt(getStyle.left);
-            let topVal = parseInt(getStyle.top);
-            wrapper.style.left = `${leftVal + movementX}px`;
-            wrapper.style.top = `${topVal + movementY}px`;
-        }
-
-        header.addEventListener("mousedown", ()=>{
-            header.classList.add("active");
-            header.addEventListener("mousemove", onDrag);
-        });
-
-        document.addEventListener("mouseup", ()=>{
-            header.classList.remove("active");
-            header.removeEventListener("mousemove", onDrag);
-        });
-        function copyText() {
-            var input = document.getElementById("myInput");
-            var output = document.getElementById("output");
-            output.innerHTML = input.value;
-        }
-        function changeColor() {
-            var colorPicker = document.getElementById("colorPicker");
-            var selectedColor = colorPicker.options[colorPicker.selectedIndex].value;
-            var myDiv = document.getElementById("output");
-            myDiv.style.color = selectedColor;
-        }
-        function changeFontSize() {
-            var fontSizePicker = document.getElementById("fontSizePicker");
-            var selectedSize = fontSizePicker.options[fontSizePicker.selectedIndex].value;
-            var myDiv = document.getElementById("output");
-            myDiv.style.fontSize = selectedSize;
-        }
-        function changeFont() {
-            var fontPicker = document.getElementById("fontPicker");
-            var selectedFont = fontPicker.options[fontPicker.selectedIndex].value;
-            var myDiv = document.getElementById("output");
-            myDiv.style.fontFamily = selectedFont;
-        }
-
-
-    </script>
+<main class="d-flex container flex-grow-1 mt-5 justify-content-start">
+<ul>
+    <li><a href="/L1-L2/oefening1.html">Oefening 1</a></li>
+    <li><a href="L1-L2/oefening2.html">Oefening 2</a></li>
+    <li><a href="L1-L2/oefening3.html">Oefening 3</a></li>
+    <li><a href="L1-L2/oefening4.html">Oefening 4</a></li>
+    <li><a href="L1-L2/oefening5.html">Oefening 5</a></li>
+</ul>
+</main>
+<footer class="bg-primary p-3 text-light">&copy; <a href="https://www.thomasmore.be/" class="text-light">Thomas More</a></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
