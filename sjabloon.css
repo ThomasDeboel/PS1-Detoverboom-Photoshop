@@ -115,16 +115,11 @@ footer a:hover {
 }
 
 #oefening4 {
-    filter: contrast(45%) blur(2px);
+    filter: blur(2px);
 }
 
 #oefening5 {
-    filter: brightness(75%) blur(1px);
-}
-
-#oefening6 {
-    transform: rotate(180deg);
-    filter: contrast(200%);
+    filter: contrast(55%);
 }
 
 #linkOefeningen {
