@@ -14,23 +14,23 @@ sliderBrightness.style.display ='none';
 
 // if you change this slider than the blur will wil increase or decrease
 sliderBlur.addEventListener('input', function() {
-    image.style.filter = `blur(${this.value}px) grayscale(${sliderZwartWit.value*10}%) contrast(${sliderContrast.value*10}%) brightness(${sliderBrightness.value*10}%)`;
+    image.style.filter = `blur(${this.value}px) grayscale(${sliderZwartWit.value*100}%) contrast(${sliderContrast.value*10}%) brightness(${sliderBrightness.value*10}%)`;
 });
 // if you change this slider than the zwartwit value will wil increase or decrease
 sliderZwartWit.addEventListener('input', function() {
-    image.style.filter = `blur(${sliderBlur.value}px) grayscale(${this.value*10}%) contrast(${sliderContrast.value*10}%) brightness(${sliderBrightness.value*10}%)`;
+    image.style.filter = `blur(${sliderBlur.value}px) grayscale(${this.value*100}%) contrast(${sliderContrast.value*10}%) brightness(${sliderBrightness.value*10}%)`;
 });
 // if you change this slider than the contrast will wil increase or decrease
 sliderContrast.addEventListener('input', function () {
-    image.style.filter = `blur(${sliderBlur.value}px) grayscale(${sliderZwartWit.value*10}%) contrast(${this.value*10}%) brightness(${sliderBrightness.value*10}%)`;
+    image.style.filter = `blur(${sliderBlur.value}px) grayscale(${sliderZwartWit.value*100}%) contrast(${this.value*10}%) brightness(${sliderBrightness.value*10}%)`;
 });
 sliderBrightness.addEventListener('input', function () {
-    image.style.filter = `blur(${sliderBlur.value}px) grayscale(${sliderZwartWit.value*10}%) contrast(${sliderContrast.value*10}%) brightness(${this.value*10}%)`;
+    image.style.filter = `blur(${sliderBlur.value}px) grayscale(${sliderZwartWit.value*100}%) contrast(${sliderContrast.value*10}%) brightness(${this.value*10}%)`;
 });
 
 // if you change the value of the slider than the picture will turn
 sliderDraaien.addEventListener('input', function () {
-    image.style.filter = `blur(${sliderBlur.value}px) grayscale(${sliderZwartWit.value*10}%) contrast(${sliderContrast.value*10}%) brightness(${sliderBrightness.value*10}%)`;
+    image.style.filter = `blur(${sliderBlur.value}px) grayscale(${sliderZwartWit.value*100}%) contrast(${sliderContrast.value*10}%) brightness(${sliderBrightness.value*10}%)`;
     image.style.transform = `rotate(${this.value*10}deg)`;
 });
 
