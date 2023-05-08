@@ -14,5 +14,9 @@ Alertbtn.addEventListener('click',function (){
     console.log(contrasting)
     if (filter2L3.includes(bluring) && filter2L3.includes(contrasting)){
         window.location.href = "oefening3.html"
+        // myElement.style.display = "none";
+    }
+    else{
+        // myElement.style.display = "block";
     }
 });
