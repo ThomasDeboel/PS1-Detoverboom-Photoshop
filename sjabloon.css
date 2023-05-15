@@ -157,3 +157,20 @@ footer a:hover {
     border-radius: 10px 10px 10px 10px;
     text-decoration: none;
 }
+#draggable-element {
+    width: 100px;
+    height: 10px;
+    font-size: 30px;
+    color: black;
+    padding: 10px 12px;
+    cursor: move;
+    position: absolute;
+    background-color: transparent;
+
+}
+.verborgen {
+    display: none;
+}
+#tekst{
+    color: #ffffff;
+}
